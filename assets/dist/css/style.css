@@ -10,6 +10,11 @@
   background-color: #d3d4d3;
 }
 
+.navbar li:hover,
+.sub-menu-search:hover {
+  background-color: rgb(38, 85, 65) !important;
+}
+
 .sub-menu {
   color: #909090;
   font-size: 1.45rem;
@@ -17,7 +22,11 @@
 }
 
 .sub-menu-item li {
-  padding: 0.5rem 1rem;
+  padding: 0.89rem 1rem;
+}
+
+.sub-menu-item li:hover {
+  background-color: rgb(158, 158, 158);
 }
 
 .sub-menu-item a {
@@ -60,6 +69,10 @@
   list-style: none;
   padding-top: 0.75rem;
   padding-left: 1rem;
+}
+
+.sidebar li:hover {
+  background-color: rgba(54, 54, 54, 0.5);
 }
 
 .sidebar a {
@@ -109,19 +122,25 @@
   position: absolute;
   border: 1px solid rgba(41, 41, 41, 0.5);
   background-color: #fff;
-  padding: 2.25rem;
-  height: 70vh;
-  right: 2%;
+  padding: 1.45rem;
+  height: 92vh;
+  right: 0;
   bottom: 0;
   overflow: hidden;
   z-index: 10;
+  transition: all ease-in-out 1000ms;
 }
 
 .project-form form {
-  width: 450px;
+  width: 350px;
   height: auto;
+  padding: 0.25rem;
   background-color: #fff;
   overflow: hidden;
+}
+
+.project-form form label {
+  font-weight: 600;
 }
 
 .form-container {
@@ -212,4 +231,11 @@
 .tagify {
   width: 100%;
   max-width: 700px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .border-left {
+    border-left: none !important;
+  }
 }

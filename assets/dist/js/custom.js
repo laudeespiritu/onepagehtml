@@ -12,9 +12,24 @@ $(function() {
         $(".overlay, .project-form").css("display", "none");
     });
 
-    // Open Form
+    // Open Add Project Form
     $("#addproject").on("click", function() {
-        $(".overlay, .project-form").css("display", "block");
+        $(".overlay").css("display", "block");
+        loadingOverlay("block");
+        setTimeout(function () {
+             loadingOverlay("none"); 
+             $(".project-form").css("display", "block");
+            }, 2000);
+    });
+
+    // Open Search Project Form
+    $("#search").on("click", function() {
+        $(".overlay").css("display", "block");
+        loadingOverlay("block");
+        setTimeout(function () {
+             loadingOverlay("none"); 
+             $(".project-form").css("display", "block");
+            }, 2000);
     });
 
     const donors = document.querySelector("#txtDonors");
