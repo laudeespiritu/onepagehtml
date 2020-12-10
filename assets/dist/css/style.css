@@ -49,6 +49,7 @@
   background-color: transparent;
 }
 
+/* Sidebar */
 .sidebar {
   height: 100%;
   width: 85px;
@@ -87,6 +88,38 @@
   color: #f1f1f1;
 }
 
+/* Form Collapse */
+.form-collapse {
+  height: 100%;
+  width: 0px;
+  opacity: 0;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  background-color: #fff;
+  transition: width cubic-bezier(0.075, 0.82, 0.165, 1) 250ms;
+}
+
+.form-collapse.toggle {
+  width: 400px;
+  opacity: 1;
+  padding: 1.5rem;
+}
+
+.form-collapse .btn-form-close {
+  transform: unset;
+}
+
+.form-collapse.toggle .btn-form-close {
+  transform: translateX(-100%);
+}
+
+.form-collapse-container {
+  height: 80%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 /* Page Content */
 .content {
   padding-top: 1.23rem;
@@ -117,51 +150,13 @@
   overflow: hidden;
 }
 
-.project-form {
-  display: none;
-  position: absolute;
-  border: 1px solid rgba(41, 41, 41, 0.5);
-  background-color: #fff;
-  padding: 1.45rem;
-  height: 92vh;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  z-index: 10;
-  transition: all ease-in-out 1000ms;
-}
-
-.project-form form {
-  width: 350px;
-  height: auto;
-  padding: 0.25rem;
-  background-color: #fff;
-  overflow: hidden;
-}
-
-.project-form form label {
-  font-weight: 600;
-}
-
-.form-container {
-  flex-flow: column;
-  height: 95%;
-}
-
-.form-row {
-  position: relative;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  width: 100%;
-  padding: 2rem 0.5rem;
-}
-
 .btn-form-close {
   position: absolute;
   height: 2.5rem;
   width: 3rem;
   top: 0px;
-  right: 0px;
+  left: 0px;
+  transform: translateX(-100%);
   color: #fff;
   background-color: #246c4d;
   border: 2px solid #246c4d;
@@ -211,15 +206,15 @@
   font-size: 22px;
 }
 
-/* Datepicker */
 .input-icons span {
   position: absolute;
   right: 0;
 }
 
 .input-icons {
-  width: 100%;
-  margin-bottom: 10px;
+  position: relative;
+  /* width: 100%; */
+  /* margin-bottom: 10px; */
 }
 
 .icon {
@@ -237,5 +232,21 @@
 @media screen and (max-width: 768px) {
   .border-left {
     border-left: none !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .project-form {
+    width: 100% !important;
+  }
+
+  .form-collapse {
+    width: 100% !important;
+  }
+
+  .btn-form-close {
+    right: 0px !important;
+    left: unset !important;
+    transform: unset !important;
   }
 }

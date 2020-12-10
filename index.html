@@ -110,115 +110,114 @@
             </ul>
         </div> <!-- sidebar END -->
 
-        <!-- Form New Project -->
-        <div class="project-form">
-            <button type="button" class="btn-form-close" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+        <div class="form-collapse">
+            <button type="button" class="btn-form-close d-inline-block" aria-label="Close">
+                <svg width="1.75rem" height="1.75rem" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
             </button>
             <h4 class="text-green">Add a new project</h4>
-            <div class="form-container d-flex">
-                <div class="form-row">
-                    <form>
+            <div class="relative form-collapse-container mt-4">
+                <form>
+                    <div class="form-group">
+                        <label>CODE OR ACRONYM <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="form-group">
+                          <label>TITLE <span class="text-danger">*</span></label>
+                          <input type="text" class="form-control">
+                      </div>
+                      <div class="form-group">
+                          <label >DESCRIPTION</label>
+                          <textarea class="form-control" rows="3"></textarea>
+                      </div>
+                      <div class="form-group">
+                          <label>START DATE <span class="text-danger">*</span></label>
+                            <div class="input-icons">
+                                <span class="icon d-flex">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+                                        <path fill-rule="evenodd" d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                    </svg>
+                                </span>
+                                <input type="text" id="txtStartDate" class="form-control" autocomplete="off">
+                            </div>
+                        </div>
                         <div class="form-group">
-                            <label>CODE OR ACRONYM <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control">
+                            <label>END DATE <span class="text-danger">*</span></label>
+                            <div class="input-icons">
+                                <span class="icon d-flex">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+                                        <path fill-rule="evenodd" d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                    </svg>
+                                </span>
+                                <input type="text" id="txtEndDate" class="form-control" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                          <label>STATUS <span class="text-danger">*</span></label>
+                          <div class="input-icons">
+                                <span class="icon d-flex">
+                                    <svg width="1em" height="1em" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </span>
+                                <input type="text" id="txtStatus" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>DIVISION-ORG. UNIT <span class="text-danger">*</span></label>
+                            <div class="input-icons">
+                                <span class="icon d-flex">
+                                    <svg width="1em" height="1em" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </span>
+                                <input type="text" id="txtDivision" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                          <label>PHOTO</label>
+                          <small class="d-block text-muted mb-3">Maximum file size is 32 MB</small>
+                          <button class="btn-select">SELECT</button>
+                        </div>
+                        <div class="form-group mb-4">
+                          <div class="d-flex justify-content-between">
+                              <label>LOCATIONS</label>
+                              <span>
+                                  <a href="#" style="color: #000;">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                      </svg>
+                                    </a>
+                                </span>
                           </div>
-                          <div class="form-group">
-                              <label>TITLE <span class="text-danger">*</span></label>
-                              <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                              <label >DESCRIPTION</label>
-                              <textarea class="form-control" rows="3"></textarea>
-                          </div>
-                          <div class="form-group">
-                              <label>START DATE <span class="text-danger">*</span></label>
-                                <div class="input-icons">
-                                    <span class="icon d-flex">
-                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
-                                            <path fill-rule="evenodd" d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                                        </svg>
-                                    </span>
-                                    <input type="text" id="txtStartDate" class="form-control" autocomplete="off">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>END DATE <span class="text-danger">*</span></label>
-                                <div class="input-icons">
-                                    <span class="icon d-flex">
-                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
-                                            <path fill-rule="evenodd" d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                                        </svg>
-                                    </span>
-                                    <input type="text" id="txtEndDate" class="form-control" autocomplete="off">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                              <label>STATUS <span class="text-danger">*</span></label>
-                              <div class="input-icons">
-                                    <span class="icon d-flex">
-                                        <svg width="1em" height="1em" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                        </svg>
-                                    </span>
-                                    <input type="text" id="txtStatus" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>DIVISION-ORG. UNIT <span class="text-danger">*</span></label>
-                                <div class="input-icons">
-                                    <span class="icon d-flex">
-                                        <svg width="1em" height="1em" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                        </svg>
-                                    </span>
-                                    <input type="text" id="txtDivision" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                              <label>PHOTO</label>
-                              <small class="d-block text-muted mb-3">Maximum file size is 32 MB</small>
-                              <button class="btn-select">SELECT</button>
-                            </div>
-                            <div class="form-group mb-4">
-                              <div class="d-flex justify-content-between">
-                                  <label>LOCATIONS</label>
-                                  <span>
-                                      <a href="#" style="color: #000;">
-                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                                          </svg>
-                                        </a>
-                                    </span>
+                          <p class="d-block text-muted mb-3">No location selected</p>
+                        </div>
+                        <div class="form-group">
+                          <label>DONORS</label>
+                          <textarea type="text" id="txtDonors"></textarea>
+                      </div>
+                      <div class="form-group">
+                          <label>SECTORS</label>
+                          <textarea type="text" id="txtSectors"></textarea>
+                      </div>
+                      <div class="form-group">
+                          <label>COORDINATES</label>
+                          <div class="row">
+                              <div class="col">
+                                  <input type="text" class="form-control" placeholder="Latitude">
                               </div>
-                              <p class="d-block text-muted mb-3">No location selected</p>
-                            </div>
-                            <div class="form-group">
-                              <label>DONORS</label>
-                              <textarea type="text" id="txtDonors"></textarea>
-                          </div>
-                          <div class="form-group">
-                              <label>SECTORS</label>
-                              <textarea type="text" id="txtSectors"></textarea>
-                          </div>
-                          <div class="form-group">
-                              <label>COORDINATES</label>
-                              <div class="row">
-                                  <div class="col">
-                                      <input type="text" class="form-control" placeholder="Latitude">
-                                  </div>
-                                  <div class="col">
-                                      <input type="text" class="form-control" placeholder="Longitude">
-                                  </div>
+                              <div class="col">
+                                  <input type="text" class="form-control" placeholder="Longitude">
                               </div>
                           </div>
-                          <button id="btnSave" type="submit" class="btn-submit d-block mx-auto mt-4">SAVE</button>
-                    </form>
-                </div> <!-- form-row END -->
-            </div> <!-- form-container END -->
-        </div> <!-- project-form END -->
+                      </div>
+                      <button id="btnSave" type="submit" class="btn-submit d-block mx-auto mt-4">SAVE</button>
+                </form>
+            </div>
+        </div>
 
         <!-- Submenu -->
         <div class="sub-menu bg-grey d-flex">

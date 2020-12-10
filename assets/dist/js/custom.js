@@ -9,7 +9,8 @@ $(function() {
 
     // Close Form
     $(".btn-form-close").on("click", function() {
-        $(".overlay, .project-form").css("display", "none");
+        $(".overlay").css("display", "none");
+        $(".form-collapse").toggleClass("toggle");
     });
 
     // Open Add Project Form
@@ -18,7 +19,7 @@ $(function() {
         loadingOverlay("block");
         setTimeout(function () {
              loadingOverlay("none"); 
-             $(".project-form").css("display", "block");
+            $(".overlay, .form-collapse").toggleClass("toggle");
             }, 2000);
     });
 
@@ -27,8 +28,8 @@ $(function() {
         $(".overlay").css("display", "block");
         loadingOverlay("block");
         setTimeout(function () {
-             loadingOverlay("none"); 
-             $(".project-form").css("display", "block");
+             loadingOverlay("none");
+            $(".overlay, .form-collapse").toggleClass("toggle");
             }, 2000);
     });
 
