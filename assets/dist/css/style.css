@@ -236,15 +236,11 @@
 }
 
 @media screen and (max-width: 450px) {
-  .project-form {
+  .form-collapse.toggle {
     width: 100% !important;
   }
 
-  .form-collapse {
-    width: 100% !important;
-  }
-
-  .btn-form-close {
+  .form-collapse.toggle .btn-form-close {
     right: 0px !important;
     left: unset !important;
     transform: unset !important;
